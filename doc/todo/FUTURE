@@ -4,8 +4,10 @@ but should be decided until 1.0
 
 == API Changes ==
 
-ksClear/keyClear weg (da mit *Copy(,0) ersetzbar)
-	meta handling should be the same
+remove ksClear/keyClear (can be replaced with *Copy(,0))
+
+meta handling should be the same
+remove old metadata get/set (legacy lib)
 
 Single Interface: only get pointers, no memcopy (only one keyGetString, no
 	keyString)
@@ -17,12 +19,6 @@ no "binary" metadata hack within API:
 backslash:
 	allow \ at end of keynames?
 	Autoescape on addBaseName?
-
-remove old metadata get/set
-
-remove null ptr checks? (see decision)
-
-Start arrays with _ (and not with #)?
 
 make KEY_END, ELEKTRA_PLUGIN_END also pointers and check them with
 sentinel, have a single way how to terminate vaargs
